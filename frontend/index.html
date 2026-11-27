@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RepairHub — Trusted Technicians On Demand</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="card-container">
+
+    <!-- ==================== SCREEN 1: WELCOME ==================== -->
+    <section id="welcome-screen" class="screen active">
+      <header class="brand-header">
+        <div class="brand-logo">
+          <div class="logo-icon">R</div>
+          <span class="brand-name">RepairHub</span>
+        </div>
+        <a href="#login" class="link-primary" data-target="login-screen">Log in</a>
+      </header>
+
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Vetted local technicians
+        </div>
+        <h1 class="hero-title">Fast, reliable repairs at your doorstep.</h1>
+        <p class="hero-subtitle">
+          Book certified pros for appliances, plumbing, electrical, and electronics with upfront pricing.
+        </p>
+
+        <div class="trust-grid">
+          <div class="trust-item">
+            <p class="trust-value">4.9 ★</p>
+            <p class="trust-label">Avg. Rating</p>
+          </div>
+          <div class="trust-item trust-divider">
+            <p class="trust-value">60 min</p>
+            <p class="trust-label">Avg. Arrival</p>
+          </div>
+          <div class="trust-item">
+            <p class="trust-value">100%</p>
+            <p class="trust-label">Verified Pros</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-group">
+        <button type="button" class="btn btn-primary" data-target="signup-screen">
+          I Need a Repair
+        </button>
+        <button type="button" class="btn btn-secondary" data-target="tech-signup-screen">
+          Join as a Technician
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== SCREEN 2: CUSTOMER SIGN UP ==================== -->
+    <section id="signup-screen" class="screen">
+      <div>
+        <button type="button" class="btn-back" data-target="welcome-screen">
+          ← Back
+        </button>
+
+        <h2 class="form-title">Create customer account</h2>
+        <p class="form-subtitle">Join RepairHub and get trusted repair services near you.</p>
+
+        <form id="customer-signup-form" class="signup-form">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="e.g., David Jones" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="david@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="8" placeholder="Create a password" />
+            <p id="password-hint" class="helper-text">At least 8 characters</p>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">
+              I agree to the <a href="#terms" class="link-inline">Terms of Service</a> and <a href="#privacy" class="link-inline">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            Create Customer Account
+          </button>
+        </form>
+      </div>
+
+      <p class="footer-note">
+        Already have an account? <a href="#login" class="link-primary" data-target="login-screen">Sign in</a>
+      </p>
+    </section>
+
+    <!-- ==================== SCREEN 3: LOG IN ==================== -->
+    <section id="login-screen" class="screen">
+      <div>
+        <button type="button" class="btn-back" data-target="welcome-screen">
+          ← Back
+        </button>
+
+        <h2 class="form-title">Welcome back</h2>
+        <p class="form-subtitle">Log in to manage your repairs and bookings.</p>
+
+        <form id="customer-login-form" class="signup-form">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" name="email" required placeholder="david@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" required placeholder="Enter your password" />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            Log In
+          </button>
+        </form>
+      </div>
+
+      <p class="footer-note">
+        New to RepairHub? <a href="#signup" class="link-primary" data-target="signup-screen">Create an account</a>
+      </p>
+    </section>
+
+    <!-- ==================== SCREEN 4: TECHNICIAN SIGN UP ==================== -->
+    <section id="tech-signup-screen" class="screen">
+      <div>
+        <button type="button" class="btn-back" data-target="welcome-screen">
+          ← Back
+        </button>
+
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Technician Partner
+        </div>
+        <h2 class="form-title">Join as a Technician</h2>
+        <p class="form-subtitle">Get matched with local repair jobs in your specialty.</p>
+
+        <form id="tech-signup-form" class="signup-form">
+          <div class="form-group">
+            <label for="tech-fullname">Full Name</label>
+            <input type="text" id="tech-fullname" name="fullname" required placeholder="e.g., Michael Brown" />
+          </div>
+
+          <div class="form-group">
+            <label for="tech-email">Email Address</label>
+            <input type="email" id="tech-email" name="email" required placeholder="michael@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="tech-specialty">Primary Specialty</label>
+            <select id="tech-specialty" name="specialty" required>
+              <option value="" disabled selected>Select your trade</option>
+              <option value="appliances">Home Appliances (AC, Fridge, Washer)</option>
+              <option value="plumbing">Plumbing & Water Systems</option>
+              <option value="electrical">Electrical & Wiring</option>
+              <option value="electronics">Phones, Laptops & Electronics</option>
+              <option value="carpentry">Carpentry & Furniture Repair</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tech-password">Password</label>
+            <input type="password" id="tech-password" name="password" required minlength="8" placeholder="Create a password" />
+            <p id="tech-password-hint" class="helper-text">At least 8 characters</p>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="tech-terms" name="terms" required />
+            <label for="tech-terms">
+              I agree to the <a href="#terms" class="link-inline">Technician Terms</a> and <a href="#privacy" class="link-inline">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            Create Technician Account
+          </button>
+        </form>
+      </div>
+
+      <p class="footer-note">
+        Already registered as a pro? <a href="#login" class="link-primary" data-target="login-screen">Sign in</a>
+      </p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
